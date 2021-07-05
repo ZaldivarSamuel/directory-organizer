@@ -12,3 +12,5 @@ if __name__ == "__main__":
 
     event_handler = PatternMatchingEventHandler(patterns, ignore_patterns,
                     ignore_directories, case_sensitive)
+
+    print("Test")
