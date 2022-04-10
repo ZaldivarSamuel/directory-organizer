@@ -1,16 +1,8 @@
-import time
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler
+from os import listdir
+from os.path import isfile, join
 
-path = "/Users/samuel/Downloads"
+path = "/Users/samuel/Documents/test"
 
-if __name__ == "__main__":
-    patterns = ["*"]
-    ignore_patterns = None
-    ignore_directories = True
-    case_sensitive = True
-
-    event_handler = PatternMatchingEventHandler(patterns, ignore_patterns,
-                    ignore_directories, case_sensitive)
-
-    print("Test")
+for f in listdir(path):
+    if isfile(join(path, f)):
+        print("File: " + f)
